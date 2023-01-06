@@ -77,5 +77,3 @@ function displaySubheading(text){
 }
 
 Initialize();
-//displayText();
-//createContainer();

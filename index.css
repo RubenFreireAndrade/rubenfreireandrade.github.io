@@ -11,8 +11,8 @@ li {
 }
 
 .-body-container {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #-content-container {
@@ -48,6 +48,7 @@ li {
   border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem;
+  padding: 2%;
 
   text-align: center;
 }
