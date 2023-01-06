@@ -1,0 +1,46 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+#-content-container {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#-nav-container {
+  width: 10%;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+
+  text-align: center;
+}
+
+#-text-container {
+  width: 90%;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+
+  text-align: center;
+}
+
+#-footer {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+
+  text-align: center;
+}
