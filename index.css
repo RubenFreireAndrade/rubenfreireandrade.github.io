@@ -6,6 +6,15 @@ body {
   margin: 0px;
 }
 
+li {
+  list-style-type: none;
+}
+
+.-body-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 #-content-container {
   border-style: solid;
   border-radius: 5px;
@@ -25,6 +34,12 @@ body {
   border-width: 0.15rem;
 
   text-align: center;
+}
+
+#-nav-list-container {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
 }
 
 #-text-container {
