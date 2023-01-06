@@ -1,36 +1,23 @@
 const bodyContainer = document.getElementsByClassName('-body-container');
 const contentContainer = document.getElementById('-content-container');
+const navContainer = document.getElementById('-nav-container');
+const textContainer = document.getElementById('-text-container');
+const navLinkContainer = document.getElementById('-nav-link-container');
 
-function createContainer(){
-  const navContainer = document.createElement('div');
-  const textContainer = document.createElement('div');
-  const navLinkContainer = document.createElement('div');
+const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
 
-  navContainer.setAttribute("id", "-nav-container");
-  textContainer.setAttribute("id", "-text-container");
-  navLinkContainer.setAttribute("id", "-nav-link-container");
-  
-  navContainer.textContent = "Navigation";
-  textContainer.textContent = "Text";
-
-  contentContainer.appendChild(navContainer);
-  contentContainer.appendChild(textContainer);
-
-  navContainer.appendChild(navLinkContainer);
-
-  createList(navContainer);
-}
-
-function createList(container){
-  const navContainer = container;
-
+function Initialize(){
   const navListContainer = document.createElement('div');
   const chapterOne = document.createElement('a');
   const chapterTwo = document.createElement('a');
   const chapterThree = document.createElement('a');
+  const chapterOneTxt = document.createElement('div');
+  const chapterTwoTxt = document.createElement('div');
+  const chapterThreeTxt = document.createElement('div');
 
   navListContainer.setAttribute("id", "-nav-list-container");
   
+  // Navigation creation for hyperlink.
   chapterOne.setAttribute("id", "-c1-link");
   chapterOne.setAttribute("href", "#c1-link");
   chapterOne.textContent = "Chapter 1:";
@@ -43,18 +30,52 @@ function createList(container){
   chapterThree.setAttribute("href", "#c3-link");
   chapterThree.textContent = "Chapter 3:";
 
-  navContainer.appendChild(navListContainer);
+  // Text for each Navigation.
+  chapterOneTxt.setAttribute("id", "c1-link");
+  chapterOneTxt.textContent = loremParagraph();
 
-  addToList(navListContainer, chapterOne);
-  addToList(navListContainer, chapterTwo);
-  addToList(navListContainer, chapterThree);
+  chapterTwoTxt.setAttribute("id", "c2-link");
+  chapterTwoTxt.textContent = loremParagraph();
+
+  chapterThreeTxt.setAttribute("id", "c3-link");
+  chapterThreeTxt.textContent = loremParagraph();
+
+  navContainer.appendChild(navListContainer);
+  
+  addToList(chapterOne);
+  addToList(chapterTwo);
+  addToList(chapterThree);
+
+  displaySubheading(chapterOne.textContent);
+  textContainer.appendChild(chapterOneTxt);
+  displaySubheading(chapterTwo.textContent);
+  textContainer.appendChild(chapterTwoTxt);
+  displaySubheading(chapterThree.textContent);
+  textContainer.appendChild(chapterThreeTxt);
 }
 
-function addToList(container, chapterName){
+
+
+function addToList(chapterName){
   const list = document.createElement('li');
 
   list.appendChild(chapterName);
-  container.appendChild(list);
+  navContainer.appendChild(list);
 }
 
-createContainer();
+function loremParagraph(){
+  return loremText.repeat(5);
+}
+
+function displaySubheading(text){
+  const subheading = document.createElement('h3');
+
+  subheading.setAttribute("id", "-subheading");
+  subheading.textContent = text;
+
+  textContainer.appendChild(subheading);
+}
+
+Initialize();
+//displayText();
+//createContainer();
