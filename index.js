@@ -1,34 +1,38 @@
+const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
+
 const bodyContainer = document.getElementsByClassName('-body-container');
 const contentContainer = document.getElementById('-content-container');
 const navContainer = document.getElementById('-nav-container');
 const textContainer = document.getElementById('-text-container');
-const navLinkContainer = document.getElementById('-nav-link-container');
+//const navLinkContainer = document.getElementById('-nav-link-container');
 
-const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
 
-function Initialize(){
-  const navListContainer = document.createElement('div');
+function initialize(){
+  //const navLinkContainer = document.createElement('div');
   const chapterOne = document.createElement('a');
   const chapterTwo = document.createElement('a');
   const chapterThree = document.createElement('a');
   const chapterOneTxt = document.createElement('div');
   const chapterTwoTxt = document.createElement('div');
   const chapterThreeTxt = document.createElement('div');
+  const image = document.createElement('div');
 
-  navListContainer.setAttribute("id", "-nav-list-container");
+  let imgCarGirl = new Image();
+  imgCarGirl.src = "./assets/girlcar.gif";
+  image.appendChild(imgCarGirl);
   
   // Navigation creation for hyperlink.
   chapterOne.setAttribute("id", "-c1-link");
   chapterOne.setAttribute("href", "#c1-link");
-  chapterOne.textContent = "Chapter 1:";
+  chapterOne.textContent = "Chapter 1";
 
   chapterTwo.setAttribute("id", "-c2-link");
   chapterTwo.setAttribute("href", "#c2-link");
-  chapterTwo.textContent = "Chapter 2:";
+  chapterTwo.textContent = "Chapter 2";
 
   chapterThree.setAttribute("id", "-c3-link");
   chapterThree.setAttribute("href", "#c3-link");
-  chapterThree.textContent = "Chapter 3:";
+  chapterThree.textContent = "Chapter 3";
 
   // Text for each Navigation.
   chapterOneTxt.setAttribute("id", "c1-link");
@@ -40,18 +44,20 @@ function Initialize(){
   chapterThreeTxt.setAttribute("id", "c3-link");
   chapterThreeTxt.textContent = loremParagraph();
 
-  navContainer.appendChild(navListContainer);
+  // navContainer.appendChild(navLinkContainer);
   
   addToList(chapterOne);
   addToList(chapterTwo);
   addToList(chapterThree);
 
+  // Appending child & setting text order.
   displaySubheading(chapterOne.textContent);
   textContainer.appendChild(chapterOneTxt);
   displaySubheading(chapterTwo.textContent);
   textContainer.appendChild(chapterTwoTxt);
   displaySubheading(chapterThree.textContent);
   textContainer.appendChild(chapterThreeTxt);
+  textContainer.appendChild(image);
 }
 
 
@@ -76,4 +82,4 @@ function displaySubheading(text){
   textContainer.appendChild(subheading);
 }
 
-Initialize();
+initialize();
