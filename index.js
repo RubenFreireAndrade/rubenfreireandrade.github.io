@@ -1,11 +1,11 @@
 const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
+let repeatLoremText = 30;
 
 const bodyContainer = document.getElementsByClassName('-body-container');
 const contentContainer = document.getElementById('-content-container');
 const navContainer = document.getElementById('-nav-container');
 const textContainer = document.getElementById('-text-container');
 //const navLinkContainer = document.getElementById('-nav-link-container');
-
 
 function initialize(){
   //const navLinkContainer = document.createElement('div');
@@ -24,15 +24,15 @@ function initialize(){
   // Navigation creation for hyperlink.
   chapterOne.setAttribute("id", "-c1-link");
   chapterOne.setAttribute("href", "#c1-link");
-  chapterOne.textContent = "Chapter 1";
+  chapterOne.textContent = "Home";
 
   chapterTwo.setAttribute("id", "-c2-link");
   chapterTwo.setAttribute("href", "#c2-link");
-  chapterTwo.textContent = "Chapter 2";
+  chapterTwo.textContent = "About";
 
   chapterThree.setAttribute("id", "-c3-link");
   chapterThree.setAttribute("href", "#c3-link");
-  chapterThree.textContent = "Chapter 3";
+  chapterThree.textContent = "Portfolio";
 
   // Text for each Navigation.
   chapterOneTxt.setAttribute("id", "c1-link");
@@ -53,14 +53,14 @@ function initialize(){
   // Appending child & setting text order.
   displaySubheading(chapterOne.textContent);
   textContainer.appendChild(chapterOneTxt);
+  
   displaySubheading(chapterTwo.textContent);
   textContainer.appendChild(chapterTwoTxt);
+  
   displaySubheading(chapterThree.textContent);
   textContainer.appendChild(chapterThreeTxt);
   textContainer.appendChild(image);
 }
-
-
 
 function addToList(chapterName){
   const list = document.createElement('li');
@@ -70,7 +70,7 @@ function addToList(chapterName){
 }
 
 function loremParagraph(){
-  return loremText.repeat(5);
+  return loremText.repeat(repeatLoremText);
 }
 
 function displaySubheading(text){
@@ -82,4 +82,15 @@ function displaySubheading(text){
   textContainer.appendChild(subheading);
 }
 
+var sticky = navContainer.offsetTop;
+
+function stickNavBar() {
+  if (window.pageYOffset >= sticky) {
+    navContainer.classList.add("sticky")
+  } else {
+    navContainer.classList.remove("sticky");
+  }
+}
+
 initialize();
+window.onscroll = function() {stickNavBar()};
