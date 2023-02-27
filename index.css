@@ -6,13 +6,13 @@ body {
   margin: 0px;
 }
 
-.-body-container {
+.body-container {
   margin-left: 10%;
   margin-right: 10%;
 }
 
 /* FOR NAVIGATION */
-#-content-container {
+#content-container {
   border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem;
@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-#-nav-container {
+#nav-container {
   display: flex;
   flex-direction: row;
 
@@ -75,7 +75,7 @@ li a:hover:not(.active) {
 }
 
 /* FOR TEXT */
-#-text-container {
+#text-container {
   border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem;
@@ -84,13 +84,20 @@ li a:hover:not(.active) {
   text-align: center;
 }
 
-#-footer {
+#footer {
   border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem;
 
   text-align: center;
 }
+
+
+
+
+
+
+
 
 /* From different source */
 #hero {

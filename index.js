@@ -1,10 +1,10 @@
 const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
 let repeatLoremText = 30;
 
-const bodyContainer = document.getElementsByClassName('-body-container');
-const contentContainer = document.getElementById('-content-container');
-const navContainer = document.getElementById('-nav-container');
-const textContainer = document.getElementById('-text-container');
+const bodyContainer = document.getElementsByClassName('body-container');
+const contentContainer = document.getElementById('content-container');
+const navContainer = document.getElementById('nav-container');
+const textContainer = document.getElementById('text-container');
 //const navLinkContainer = document.getElementById('-nav-link-container');
 
 function initialize(){
@@ -22,26 +22,26 @@ function initialize(){
   image.appendChild(imgCarGirl);
   
   // Navigation creation for hyperlink.
-  chapterOne.setAttribute("id", "-c1-link");
-  chapterOne.setAttribute("href", "#c1-link");
+  chapterOne.setAttribute("id", "c1-link");
   chapterOne.textContent = "Home";
+  chapterOne.setAttribute("href", "#" + chapterOne.textContent);
 
-  chapterTwo.setAttribute("id", "-c2-link");
-  chapterTwo.setAttribute("href", "#c2-link");
+  chapterTwo.setAttribute("id", "c2-link");
   chapterTwo.textContent = "About";
+  chapterTwo.setAttribute("href", "#" + chapterTwo.textContent);
 
-  chapterThree.setAttribute("id", "-c3-link");
-  chapterThree.setAttribute("href", "#c3-link");
+  chapterThree.setAttribute("id", "c3-link");
   chapterThree.textContent = "Portfolio";
+  chapterThree.setAttribute("href", "#" + chapterThree.textContent);
 
   // Text for each Navigation.
-  chapterOneTxt.setAttribute("id", "c1-link");
+  chapterOneTxt.setAttribute("id", "c1-text");
   chapterOneTxt.textContent = loremParagraph();
 
-  chapterTwoTxt.setAttribute("id", "c2-link");
+  chapterTwoTxt.setAttribute("id", "c2-text");
   chapterTwoTxt.textContent = loremParagraph();
 
-  chapterThreeTxt.setAttribute("id", "c3-link");
+  chapterThreeTxt.setAttribute("id", "c3-text");
   chapterThreeTxt.textContent = loremParagraph();
 
   // navContainer.appendChild(navLinkContainer);
@@ -76,7 +76,7 @@ function loremParagraph(){
 function displaySubheading(text){
   const subheading = document.createElement('h3');
 
-  subheading.setAttribute("id", "-subheading");
+  subheading.setAttribute("id", text);
   subheading.textContent = text;
 
   textContainer.appendChild(subheading);
