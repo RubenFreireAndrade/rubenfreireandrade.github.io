@@ -12,17 +12,6 @@ body {
 }
 
 /* FOR NAVIGATION */
-#content-container {
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 0.15rem;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
 #nav-container {
   display: flex;
   flex-direction: row;
@@ -34,16 +23,10 @@ body {
 
   text-align: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #023b6d;
 
   font-size: 1.5rem;
 }
-
-/* #-nav-link-container {
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 0.15rem;
-} */
 
 li {
   list-style-type: none;
@@ -74,15 +57,91 @@ li a:hover:not(.active) {
   width: 100%;
 }
 
+/* FOR CONTENT */
+#content-container {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+
+  display: block;
+  
+  text-align: center;
+
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+#c1-container {
+  display: flex;
+  flex-direction: row;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+}
+
+#c2-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+}
+
+#c3-container {
+  display: flex;
+  flex-direction: row;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem;
+}
+
+#about-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  font-size: 1.3rem;
+}
+
+#github-link-text {
+  color: #000;
+}
+
+#about-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+#info-list {
+  display: flex;
+  flex-direction: row;
+
+  padding: 2%;
+}
+
+#span-text {
+  padding-left: 2%;
+}
+
+#span-link {
+  color: #000;
+}
+
 /* FOR TEXT */
-#text-container {
+/* #text-container {
   border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem;
   padding: 2%;
 
   text-align: center;
-}
+} */
 
 #footer {
   border-style: solid;

@@ -1,90 +1,132 @@
 const loremText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi non sunt porro, reprehenderit, adipisci est possimus architecto nemo ipsa, nisi veniam amet doloremque assumenda hic. Dicta cumque dolor modi quas.";
-let repeatLoremText = 30;
+let repeatLoremText = 5;
 
 const bodyContainer = document.getElementsByClassName('body-container');
 const contentContainer = document.getElementById('content-container');
 const navContainer = document.getElementById('nav-container');
-const textContainer = document.getElementById('text-container');
-//const navLinkContainer = document.getElementById('-nav-link-container');
+//const textContainer = document.getElementById('text-container');
+const homeContainer = document.getElementById('c1-container');
+const aboutContainer = document.getElementById('c2-container');
+const portfolioContainer = document.getElementById('c3-container');
 
-function initialize(){
-  //const navLinkContainer = document.createElement('div');
-  const chapterOne = document.createElement('a');
-  const chapterTwo = document.createElement('a');
-  const chapterThree = document.createElement('a');
-  const chapterOneTxt = document.createElement('div');
-  const chapterTwoTxt = document.createElement('div');
-  const chapterThreeTxt = document.createElement('div');
-  const image = document.createElement('div');
+const homePicture = document.getElementById('home-picture');
+const homeText = document.getElementById('home-text');
+
+const aboutPicture = document.getElementById('about-picture');
+const aboutText = document.getElementById('about-text');
+
+const portfolioPicture = document.getElementById('portfolio-picture');
+const portfolioText = document.getElementById('portfolio-text');
+
+function initialize() {
+  const chapterOneLink = document.createElement('a');
+  const chapterTwoLink = document.createElement('a');
+  const chapterThreeLink = document.createElement('a');
+  const github = document.createElement('strong');
+  const degree = document.createElement('strong');
+  const email = document.createElement('strong');
+  const city = document.createElement('strong');
 
   let imgCarGirl = new Image();
+  let mainMenu = new Image();
+  let imgCarGirl3 = new Image();
   imgCarGirl.src = "./assets/girlcar.gif";
-  image.appendChild(imgCarGirl);
-  
+  mainMenu.src = "./assets/MainMenu.gif";
+  imgCarGirl3.src = "./assets/girlcar.gif";
+
   // Navigation creation for hyperlink.
-  chapterOne.setAttribute("id", "c1-link");
-  chapterOne.textContent = "Home";
-  chapterOne.setAttribute("href", "#" + chapterOne.textContent);
+  chapterOneLink.setAttribute("id", "c1-link");
+  chapterOneLink.textContent = "Home";
+  chapterOneLink.setAttribute("href", "#home-section");
 
-  chapterTwo.setAttribute("id", "c2-link");
-  chapterTwo.textContent = "About";
-  chapterTwo.setAttribute("href", "#" + chapterTwo.textContent);
+  chapterTwoLink.setAttribute("id", "c2-link");
+  chapterTwoLink.textContent = "About";
+  chapterTwoLink.setAttribute("href", "#about-section");
 
-  chapterThree.setAttribute("id", "c3-link");
-  chapterThree.textContent = "Portfolio";
-  chapterThree.setAttribute("href", "#" + chapterThree.textContent);
-
-  // Text for each Navigation.
-  chapterOneTxt.setAttribute("id", "c1-text");
-  chapterOneTxt.textContent = loremParagraph();
-
-  chapterTwoTxt.setAttribute("id", "c2-text");
-  chapterTwoTxt.textContent = loremParagraph();
-
-  chapterThreeTxt.setAttribute("id", "c3-text");
-  chapterThreeTxt.textContent = loremParagraph();
-
-  // navContainer.appendChild(navLinkContainer);
+  chapterThreeLink.setAttribute("id", "c3-link");
+  chapterThreeLink.textContent = "Portfolio";
+  chapterThreeLink.setAttribute("href", "#portfolio-section");
   
-  addToList(chapterOne);
-  addToList(chapterTwo);
-  addToList(chapterThree);
+  addToListNavigation(chapterOneLink);
+  addToListNavigation(chapterTwoLink);
+  addToListNavigation(chapterThreeLink);
+  
+  homePicture.appendChild(imgCarGirl);
+  //homeText.textContent = loremParagraph();
 
+  aboutPicture.appendChild(mainMenu);
+  //aboutText.textContent = loremParagraph();
+  // addToListInfo(github);
+
+  // github.textContent = "GitHub: ";
+  // const githubSpan = document.createElement('span');
+  // githubSpan.setAttribute("style", "padding-left: 2%");
+
+  // const githubLink = document.createElement('a');
+  // githubLink.setAttribute("id", "github-link-text");
+  // githubLink.setAttribute("href", "https://github.com/RubenFreireAndrade");
+  // githubLink.textContent = "https://github.com/RubenFreireAndrade";
+
+  // githubSpan.appendChild(githubLink);
+  // aboutText.appendChild(githubSpan);
+
+  //addToListInfo(degree);
+  // addToListInfo(email);
+  // addToListInfo(city);
+
+  degree.textContent = "Degree: BSc Games Programming";
+  email.textContent = "Email: rubenswork20@gmail.com";
+  city.textContent = "City: London, United Kingdom";
+
+  portfolioPicture.appendChild(imgCarGirl3);
+  //portfolioText.textContent = loremParagraph();
+
+  
   // Appending child & setting text order.
-  displaySubheading(chapterOne.textContent);
-  textContainer.appendChild(chapterOneTxt);
+  // displaySubheading(chapterOneContainer, chapterOneLink.textContent);
+  // chapterOneContainer.appendChild(chapterOneTxt);
+  // contentContainer.appendChild(chapterOneContainer);
   
-  displaySubheading(chapterTwo.textContent);
-  textContainer.appendChild(chapterTwoTxt);
+  // displaySubheading(chapterTwoContainer, chapterTwoLink.textContent);
+  // chapterTwoContainer.appendChild(chapterTwoTxt);
+  // contentContainer.appendChild(chapterTwoContainer);
   
-  displaySubheading(chapterThree.textContent);
-  textContainer.appendChild(chapterThreeTxt);
-  textContainer.appendChild(image);
+  // displaySubheading(chapterThreeContainer, chapterThreeLink.textContent);
+  // chapterThreeContainer.appendChild(chapterThreeTxt);
+  // contentContainer.appendChild(chapterThreeContainer);
 }
 
-function addToList(chapterName){
+function addToListNavigation(chapterName) {
   const list = document.createElement('li');
 
   list.appendChild(chapterName);
   navContainer.appendChild(list);
 }
 
-function loremParagraph(){
+function addToListInfo(infoName) {
+
+  aboutText.appendChild(infoName);
+}
+
+function createSpan(span) {
+  return span;
+}
+
+function loremParagraph() {
   return loremText.repeat(repeatLoremText);
 }
 
-function displaySubheading(text){
+function displaySubheading(container, text) {
   const subheading = document.createElement('h3');
 
   subheading.setAttribute("id", text);
   subheading.textContent = text;
 
-  textContainer.appendChild(subheading);
+  container.appendChild(subheading);
 }
 
-var sticky = navContainer.offsetTop;
-
 function stickNavBar() {
+  var sticky = navContainer.offsetTop;
   if (window.pageYOffset >= sticky) {
     navContainer.classList.add("sticky")
   } else {
