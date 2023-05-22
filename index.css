@@ -70,6 +70,8 @@ li a:hover:not(.active) {
 /* FOR CONTENT */
 #home-section {
   background-color: white;
+
+  padding-bottom: 2%;
 }
 
 #home-heading {
@@ -80,12 +82,22 @@ li a:hover:not(.active) {
   padding: 3%;
 }
 
+#home-text {
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 #about-section {
   background-color: #f5f8fd;
+
+  padding-bottom: 1%;
 }
 
 #portfolio-section {
   background-color: white;
+
+  padding-bottom: 2%;
 }
 
 #section-heading {
@@ -123,8 +135,8 @@ li a:hover:not(.active) {
   border-radius: 5px;
   border-width: 0.15rem; */
 
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+  /* border-top: 2px solid;
+  border-bottom: 2px solid; */
 
   font-family: "Open Sans", sans-serif;
 }
@@ -181,8 +193,8 @@ li a:hover:not(.active) {
 
   /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem; */
-  border-bottom: 2px solid;
+  border-width: 0.15rem;
+  border-bottom: 2px solid; */
 
   font-family: "Open Sans", sans-serif;
 }
@@ -212,6 +224,9 @@ li a:hover:not(.active) {
   margin-left: 10%;
   margin-right: 10%;
 }
+
+
+
 
 
 
@@ -250,9 +265,9 @@ li a:hover:not(.active) {
 } */
 
 #footer {
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
 
   text-align: center;
 }
