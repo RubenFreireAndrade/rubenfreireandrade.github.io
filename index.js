@@ -16,8 +16,9 @@ const aboutPicture = document.getElementById('about-picture');
 const aboutText = document.getElementById('about-text');
 
 const portfolioPictureSdl = document.getElementById('portfolio-picture-sdl');
-//const portfolioPictureSecureShare = document.getElementById('portfolio-picture-secureshare');
+const portfolioPictureSecureShare = document.getElementById('portfolio-picture-secureshare');
 const portfolioPicturePicnic = document.getElementById('portfolio-picture-picnic');
+
 const portfolioText = document.getElementById('portfolio-text');
 
 function initialize() {
@@ -32,10 +33,11 @@ function initialize() {
   let imgCarGirl = new Image();
   let ueDemo = new Image();
   let sdlDemo = new Image();
-  let secureshareDemo = new Image();
+  let secureShareDemo = new Image();
   imgCarGirl.src = "./assets/girlcar.gif";
   ueDemo.src = "./assets/UEDEMO_350w.gif";
   sdlDemo.src = "./assets/SDLDEMO_350w.gif";
+  secureShareDemo.src = "./assets/SecureShare.gif";
 
   // Navigation creation for hyperlink.
   chapterOneLink.setAttribute("id", "c1-link");
@@ -83,6 +85,7 @@ function initialize() {
 
   portfolioPictureSdl.appendChild(sdlDemo);
   portfolioPicturePicnic.appendChild(ueDemo);
+  portfolioPictureSecureShare.appendChild(secureShareDemo);
   //portfolioText.textContent = loremParagraph();
 
   
