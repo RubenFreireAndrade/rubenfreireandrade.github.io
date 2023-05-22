@@ -29,10 +29,11 @@ function initialize() {
 
   let imgCarGirl = new Image();
   let mainMenu = new Image();
-  let imgCarGirl3 = new Image();
+  let sdlDemo = new Image();
+  let secureshareDemo = new Image();
   imgCarGirl.src = "./assets/girlcar.gif";
   mainMenu.src = "./assets/MainMenu.gif";
-  imgCarGirl3.src = "./assets/girlcar.gif";
+  sdlDemo.src = "./assets/SDLDEMO.gif";
 
   // Navigation creation for hyperlink.
   chapterOneLink.setAttribute("id", "c1-link");
@@ -54,7 +55,7 @@ function initialize() {
   homePicture.appendChild(imgCarGirl);
   //homeText.textContent = loremParagraph();
 
-  aboutPicture.appendChild(mainMenu);
+  //aboutPicture.appendChild(mainMenu);
   //aboutText.textContent = loremParagraph();
   // addToListInfo(github);
 
@@ -75,10 +76,10 @@ function initialize() {
   // addToListInfo(city);
 
   degree.textContent = "Degree: BSc Games Programming";
-  email.textContent = "Email: rubenswork20@gmail.com";
+  email.textContent = "Email: ruben.freireandrade@gmail.com";
   city.textContent = "City: London, United Kingdom";
 
-  portfolioPicture.appendChild(imgCarGirl3);
+  portfolioPicture.appendChild(sdlDemo);
   //portfolioText.textContent = loremParagraph();
 
   

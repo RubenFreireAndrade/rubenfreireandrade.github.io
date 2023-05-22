@@ -4,11 +4,21 @@
 
 body {
   margin: 0px;
+  background-image: linear-gradient(to right, white, rgba(194, 219, 254), white);
+  /* background-color: rgba(194, 219, 254, 1); */
 }
 
+/* h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+} */
+
 .body-container {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 /* FOR NAVIGATION */
@@ -16,9 +26,9 @@ body {
   display: flex;
   flex-direction: row;
 
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
   padding: 1%;
 
   text-align: center;
@@ -58,27 +68,69 @@ li a:hover:not(.active) {
 }
 
 /* FOR CONTENT */
+#home-section {
+  background-color: white;
+}
+
+#home-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+
+  padding: 3%;
+}
+
+#about-section {
+  background-color: #f5f8fd;
+}
+
+#portfolio-section {
+  background-color: white;
+}
+
+#section-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+
+  border-bottom: 2px solid;
+
+  padding: 1%;
+
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
 #content-container {
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
 
   display: block;
   
   text-align: center;
 
-  padding-top: 5%;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-top: 4%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 #c1-container {
   display: flex;
   flex-direction: row;
 
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
+
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#c1-link {
+  font-family: "Open Sans", sans-serif; 
 }
 
 #c2-container {
@@ -86,18 +138,62 @@ li a:hover:not(.active) {
   flex-direction: row;
   align-items: center;
 
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
+
+  /* border-top: 2px solid;
+  border-bottom: 2px solid; */
+
+  font-family: "Open Sans", sans-serif;
 }
 
-#c3-container {
-  display: flex;
-  flex-direction: row;
+#c2-link {
+  font-family: "Open Sans", sans-serif; 
+}
 
-  border-style: solid;
+#c3-container-sdl {
+  display: flex;
+  flex-direction: column;
+
+  /* border-style: solid;
   border-radius: 5px;
-  border-width: 0.15rem;
+  border-width: 0.15rem; */
+  /* border-top: 2px solid; */
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#c3-container-secureshare {
+  display: flex;
+  flex-direction: column;
+
+  /* border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem; */
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#c3-container-picnic {
+  display: flex;
+  flex-direction: column;
+
+  /* border-style: solid;
+  border-radius: 5px;
+  border-width: 0.15rem; */
+  border-bottom: 2px solid;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+#c3-link {
+  font-family: "Open Sans", sans-serif; 
+}
+
+#about-picture {
+  margin-left: 1%;
+  margin-right: 5%;
 }
 
 #about-text {
@@ -106,8 +202,18 @@ li a:hover:not(.active) {
   justify-content: center;
   flex-direction: row;
 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+
+  margin-right: 5%;
 }
+
+#portfolio-text {
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
 
 #github-link-text {
   color: #000;
