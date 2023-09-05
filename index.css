@@ -109,8 +109,9 @@ li a:hover:not(.active) {
 
   padding: 1%;
 
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 1%;
 }
 
 #content-container {
@@ -168,6 +169,8 @@ li a:hover:not(.active) {
   display: flex;
   flex-direction: column;
 
+  margin-bottom: 2%;
+
   /* border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem; */
@@ -180,6 +183,8 @@ li a:hover:not(.active) {
   display: flex;
   flex-direction: column;
 
+  margin-bottom: 2%;
+
   /* border-style: solid;
   border-radius: 5px;
   border-width: 0.15rem; */
@@ -190,6 +195,8 @@ li a:hover:not(.active) {
 #c3-container-picnic {
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 2%;
 
   /* border-style: solid;
   border-radius: 5px;

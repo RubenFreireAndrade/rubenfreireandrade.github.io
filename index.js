@@ -35,9 +35,9 @@ function initialize() {
   let sdlDemo = new Image();
   let secureShareDemo = new Image();
   imgCarGirl.src = "./assets/girlcar.gif";
-  ueDemo.src = "./assets/UEDEMO_350w.gif";
-  sdlDemo.src = "./assets/SDLDEMO_350w.gif";
-  secureShareDemo.src = "./assets/SecureShare.gif";
+  ueDemo.src = "./assets/UEDEMO_500w.gif";
+  sdlDemo.src = "./assets/SDLDEMO_500w.gif";
+  secureShareDemo.src = "./assets/SecureShare_500w.gif";
 
   // Navigation creation for hyperlink.
   chapterOneLink.setAttribute("id", "c1-link");
