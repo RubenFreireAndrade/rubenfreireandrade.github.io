@@ -25,10 +25,10 @@ function initialize() {
   const chapterOneLink = document.createElement('a');
   const chapterTwoLink = document.createElement('a');
   const chapterThreeLink = document.createElement('a');
-  const github = document.createElement('strong');
-  const degree = document.createElement('strong');
-  const email = document.createElement('strong');
-  const city = document.createElement('strong');
+  // const github = document.createElement('strong');
+  // const degree = document.createElement('strong');
+  // const email = document.createElement('strong');
+  // const city = document.createElement('strong');
 
   let imgCarGirl = new Image();
   let ueDemo = new Image();
@@ -51,11 +51,11 @@ function initialize() {
   chapterThreeLink.setAttribute("id", "c3-link");
   chapterThreeLink.textContent = "Portfolio";
   chapterThreeLink.setAttribute("href", "#portfolio-section");
-  
+
   addToListNavigation(chapterOneLink);
   addToListNavigation(chapterTwoLink);
   addToListNavigation(chapterThreeLink);
-  
+
   //homePicture.appendChild(imgCarGirl);
   //homeText.textContent = loremParagraph();
 
@@ -79,25 +79,25 @@ function initialize() {
   // addToListInfo(email);
   // addToListInfo(city);
 
-  degree.textContent = "Degree: BSc Games Programming";
-  email.textContent = "Email: ruben.freireandrade@gmail.com";
-  city.textContent = "City: London, United Kingdom";
+  // degree.textContent = "Degree: BSc Games Programming";
+  // email.textContent = "Email: ruben.freireandrade@gmail.com";
+  // city.textContent = "City: London, United Kingdom";
 
   portfolioPictureSdl.appendChild(sdlDemo);
   portfolioPicturePicnic.appendChild(ueDemo);
   portfolioPictureSecureShare.appendChild(secureShareDemo);
   //portfolioText.textContent = loremParagraph();
 
-  
+
   // Appending child & setting text order.
   // displaySubheading(chapterOneContainer, chapterOneLink.textContent);
   // chapterOneContainer.appendChild(chapterOneTxt);
   // contentContainer.appendChild(chapterOneContainer);
-  
+
   // displaySubheading(chapterTwoContainer, chapterTwoLink.textContent);
   // chapterTwoContainer.appendChild(chapterTwoTxt);
   // contentContainer.appendChild(chapterTwoContainer);
-  
+
   // displaySubheading(chapterThreeContainer, chapterThreeLink.textContent);
   // chapterThreeContainer.appendChild(chapterThreeTxt);
   // contentContainer.appendChild(chapterThreeContainer);
@@ -115,9 +115,9 @@ function addToListInfo(infoName) {
   aboutText.appendChild(infoName);
 }
 
-function createSpan(span) {
-  return span;
-}
+// function createSpan(span) {
+//   return span;
+// }
 
 function loremParagraph() {
   return loremText.repeat(repeatLoremText);
@@ -140,6 +140,3 @@ function stickNavBar() {
     navContainer.classList.remove("sticky");
   }
 }
-
-initialize();
-window.onscroll = function() {stickNavBar()};

@@ -95,6 +95,9 @@ li a:hover:not(.active) {
 }
 
 #portfolio-section {
+  max-width: 100%;
+  height: auto;
+  
   background-color: white;
 
   padding-bottom: 2%;
@@ -182,6 +185,10 @@ li a:hover:not(.active) {
 #c3-container-secureshare {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+
+  max-width: 100%;
+  height: auto;
 
   margin-bottom: 2%;
 
@@ -208,6 +215,11 @@ li a:hover:not(.active) {
 
 #c3-link {
   font-family: "Open Sans", sans-serif; 
+}
+
+.portfolio-picture-secureshare {
+  max-width: 100%;
+  height: auto;
 }
 
 #about-picture {
